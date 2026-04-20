@@ -242,8 +242,23 @@ Añade un bloque de estilos que haga lo siguiente:
 
 ### SOLUCIÓN
 
-```html
+```css
+body {
+  background-color: lightgray;
+}
 
+h1 {
+  color: navy;
+}
+
+h2 {
+  font-family: Arial;
+}
+
+button {
+  background-color: green;
+  color: white;
+}
 ```
 
 
