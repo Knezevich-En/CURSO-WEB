@@ -1,0 +1,16 @@
+body {
+  background-color: lightgray;
+}
+
+h1 {
+  color: navy;
+}
+
+h2 {
+  font-family: Arial;
+}
+
+button {
+  background-color: green;
+  color: white;
+}

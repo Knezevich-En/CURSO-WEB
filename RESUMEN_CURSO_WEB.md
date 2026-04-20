@@ -95,35 +95,49 @@ Vamos a evolucionar tu código anterior. Tu misión es añadir lo siguiente:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RETO #1</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Arturo Knezevich</h1>
-    <img src="https://cdn-icons-png.flaticon.com/512/606/606200.png" alt="">
+    <img src="https://cdn-icons-png.flaticon.com/512/606/606200.png" alt="" />
     <h2>Sobre mí</h2>
-    <p>Hola soy estudiante de Ingeniera Electrónica y Automatización Industrial me apasiona la tecnlogía el uso de herramientas IA que permitan mejorar los sistemas productivos y la calidad de servicios de una empresa</p>
-    <a href="https://ec.linkedin.com/" target="_blank">Visita mi perfil profesional</a>
+    <p>
+      Hola soy estudiante de Ingeniera Electrónica y Automatización Industrial
+      me apasiona la tecnlogía el uso de herramientas IA que permitan mejorar
+      los sistemas productivos y la calidad de servicios de una empresa
+    </p>
+    <a href="https://ec.linkedin.com/" target="_blank"
+      >Visita mi perfil profesional</a
+    >
     <h2>Mis herramientas favoritas</h2>
     <ul>
-        <li>Raspberry PI</li>
-        <li>Antigravity</li>
-        <li>Python</li>
-        <li>Node-Red</li>
+      <li>Raspberry PI</li>
+      <li>Antigravity</li>
+      <li>Python</li>
+      <li>Node-Red</li>
     </ul>
     <ol>
-        <li>Aprender a programar un SCADA COMPLETO</li>
-        <li>Aprender HTML & CSS</li>
-        <li>Aprender <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank">JavaScript</a></li>
-        <li>Aprender VUE.JS</li>
+      <li>Aprender a programar un SCADA COMPLETO</li>
+      <li>Aprender HTML & CSS</li>
+      <li>
+        Aprender
+        <a
+          href="https://developer.mozilla.org/es/docs/Web/JavaScript"
+          target="_blank"
+          >JavaScript</a
+        >
+      </li>
+      <li>Aprender VUE.JS</li>
     </ol>
-</body>
+  </body>
 </html>
 ```
 
 ### 📝 Formularios (El último paso de HTML Básico)
+
 - **Cajas de texto (`<input>`):**
   ```html
   <input type="text" placeholder="Tu nombre" />
@@ -156,16 +170,18 @@ Vamos a evolucionar tu código anterior. Tu misión es añadir lo siguiente:
 
 Imagina que estás diseñando una pequeña interfaz para registrar una nueva máquina en tu sistema de automatización. Vamos a añadir un formulario al final de tu documento actual (debajo de la lista ordenada).
 
--   Tu tarea es crear un formulario que contenga:
-    -   Un campo de texto para el "Nombre de la Máquina".
-    -   Un campo de número para la "Dirección IP" (o un ID numérico).
-    -   Un botón que diga "Registrar Equipo".
+- Tu tarea es crear un formulario que contenga:
+  - Un campo de texto para el "Nombre de la Máquina".
+  - Un campo de número para la "Dirección IP" (o un ID numérico).
+  - Un botón que diga "Registrar Equipo".
+
 ```html
 <form>
-    <label>Nombre de la máquina:</label>
-    <input type="text" placeholder="Ej: Bomba 1">
-    
-    <br> <button type="submit">Enviar</button>
+  <label>Nombre de la máquina:</label>
+  <input type="text" placeholder="Ej: Bomba 1" />
+
+  <br />
+  <button type="submit">Enviar</button>
 </form>
 ```
 
@@ -180,13 +196,57 @@ Imagina que estás diseñando una pequeña interfaz para registrar una nueva má
 
 ---
 
-
-
-
-
-
-
 ## 🎨 Parte 2: CSS BÁSICO E INTERMEDIO (Estilos y Arquitectura)
+
+### 🎨 CSS BÁSICO: Introducción y Selectores
+
+CSS (Cascading Style Sheets) es lo que le da "estilo" a tu estructura. Si el HTML es el esqueleto de tu tablero de control, el CSS es la pintura, las luces y la forma de los botones.
+
+El Selector, la Propiedad y el Valor
+Para cambiar algo, necesitas esta estructura en tu archivo .css:
+
+```css
+selector {
+  propiedad: valor;
+}
+
+h1 {
+  color: blue;
+  font-size: 24px;
+}
+```
+
+### ⚡ Reto Final de hoy: "Primeros Colores"
+
+Tu misión:
+Añade un bloque de estilos que haga lo siguiente:
+
+-   Que el cuerpo (body) tenga un color de fondo gris claro (puedes usar `background-color: lightgrey;`).
+-   Que tu nombre (h1) sea de color azul marino (`navy`).
+-   Que todos los subtítulos (h2) tengan una fuente diferente (usa `font-family: Arial;`).
+-   Que el botón tenga el fondo verde y el texto blanco.
+
+```html
+<head>
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+        button {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+```
+
+### SOLUCIÓN
+
+```html
+
+```
+
+
 
 ### 2.1 El Modelo de Caja (Box Model) Detallado
 
