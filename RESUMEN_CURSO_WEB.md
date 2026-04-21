@@ -309,7 +309,43 @@ Todo elemento es cuadrado.
   border-radius: 50%; /* Crea un círculo perfecto si la caja es cuadrada */
   ```
 
-### 2.2 Colores, Fondos y Sombras
+### ⚡ Reto #4: "Dando forma a tu interfaz"
+
+Vamos a aplicar esto a tu archivo de ayer. Abre tu styles.css y modifica tus reglas para que se vea profesional:
+1. **Margen Global:**Agrega esto al principio para que todo use el modelo de caja correcto:
+```css
+* {
+  box-sizing: border-box;
+}
+```
+
+2. **El formulario:**Vamos a hacer que parezca una tarjeta de control real:
+```css
+form {
+  background-color: white;
+  padding: 20px;          /* Espacio interno */
+  border: 2px solid navy; /* El borde */
+  border-radius: 8px;     /* Bordes redondeados */
+  margin-top: 20px;       /* Separarlo de la lista de arriba */
+  width: 300px;           /* Ancho fijo */
+}
+```
+3. **Inputs:**Haz que los campos de texto ocupen todo el ancho y tengan espacio para respirar:
+```css
+input {
+  display: block;        /* Para que ocupen su propia línea */
+  width: 100%;           /* Todo el ancho del formulario */
+  margin-bottom: 15px;   /* Separación entre inputs */
+  padding: 8px;
+}
+```
+
+
+
+
+
+
+### 🎨 Fondos, Gradientes y Sombras
 
 - **Fondos (`background`):**
 
@@ -332,6 +368,45 @@ Todo elemento es cuadrado.
   /* EjeX EjeY Difuminado Propagación Color */
   box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.3);
   ```
+
+
+### ⚡ Reto #5: "Efecto Industrial"
+
+Vamos a aplicar esto a tu botón y a tu formulario para que parezca un panel de control moderno.
+
+**Tu misión es actualizar estas dos reglas en tu CSS:**
+1. **Botón con Gradiente:** Cambia el `background-color: green` por un gradiente que vaya de un verde oscuro a uno más claro.
+```css
+button {
+  background: linear-gradient(135deg, #28a745, #5cd65c);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer; /* Cambia el ratón a una mano */
+  transition: 0.3s; /* Para que el cambio sea suave */
+}
+```
+
+2. **Formulario con Sombra:** Dale elevación a tu "tarjeta" de registro.
+```css
+form {
+  /* Mantén lo anterior y agrega esto: */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border: none; /* Podemos quitar el borde navy si ya tenemos sombra */
+}
+```
+3. **Efecto de Presión (Opcional):** Añade esto para que cuando pases el mouse sobre el botón, cambie un poco:
+
+```css
+button:hover {
+  transform: scale(1.05); /* Se agranda un poquito */
+  filter: brightness(1.1); /* Brilla más */
+}
+```
+
+
+
+
 
 ### 2.3 Selectores Compuestos y BEM
 
