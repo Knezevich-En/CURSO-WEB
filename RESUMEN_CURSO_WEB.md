@@ -571,3 +571,139 @@ Propiedad crítica del CSS intermedio que saca a los elementos de su flujo natur
 - `position: fixed`: Flota pegado a la pantalla. Nunca se mueve aunque hagas scroll.
 - `position: sticky`: Es normal hasta que haces scroll, luego se pega al borde de la pantalla.
 - `z-index: 100;`: Define el orden de las capas 3D. El número más alto está al frente de la pantalla.
+
+
+### Metodología BEM (Block, Element, Modifier)
+Para que tu código no sea un caos cuando crezca (como en tus proyectos de Power BI o Node-RED), usamos BEM. Es una forma de nombrar clases:
+
+- **Block**: El componente (.card)
+- **Element**: Parte del componente (.card__button)
+- **Modifier**: Una versión diferente (.card__button--red)
+
+### ⚡ Reto #8: "El Panel de Control Flotante"
+Vamos a aplicar estos conceptos a tu perfil. Vamos a crear un "Badge" o insignia de estado que flote sobre tu formulario, simulando un indicador de "Sistema Online".
+
+Tu misión en el CSS:
+
+- **Prepara el padre**: Asegúrate de que tu form tenga `position: relative;`.
+- **Crea el indicador**: Añade un pequeño div (o span) dentro de tu formulario en el HTML que diga "ONLINE".
+- **Posiciónalo**:
+```css
+/* Clase usando BEM */
+.form__status {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #28a745;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+```
+
+- **Sticky Footer**: Haz que tu footer sea sticky o fixed al fondo de la página.
+
+
+### Pseudoclases: El estado de los elementos
+- **Pseudoclases** son selectores especiales que identifican el estado de un elemento. Permiten aplicar estilos diferentes según la situación del usuario o del documento.
+- **Principales Pseudoclases**:
+  - **:hover**: Se activa cuando el puntero del mouse está sobre el elemento.
+  - **:active**: Se activa cuando el elemento está siendo presionado (por ejemplo, un botón).
+  - **:focus**: Se activa cuando el elemento recibe el foco (por ejemplo, un campo de formulario al hacer clic en él).
+  - **:visited**: Se activa en los enlaces que ya han sido visitados por el usuario.
+  - **:link**: Se activa en los enlaces que aún no han sido visitados.
+  - **:first-child**: Selecciona el primer hijo de un elemento padre.
+  - **:last-child**: Selecciona el último hijo de un elemento padre.
+  - **:nth-child(n)**: Selecciona el n-ésimo hijo de un elemento padre.
+
+
+### ⚡ Reto #9: "Interactividad de Tablero"
+Vamos a hacer que tu interfaz responda al usuario como un SCADA real.
+
+Tu misión en el CSS:
+
+- Feedback de Escritura: Haz que cuando hagas clic en un input, el borde cambie de color y brille un poco.
+
+```css
+input:focus {
+  outline: none;
+  border: 2px solid #28a745;
+  box-shadow: 0 0 8px rgba(40, 167, 69, 0.4);
+}
+```
+
+- **Cebra en las Listas**: Vamos a darle un estilo diferente a los elementos pares de tu lista de herramientas para que sea más legible.
+
+```css
+li:nth-child(even) {
+  color: navy;
+  font-weight: bold;
+}
+```
+
+- **Ajuste del Footer**: Tu footer tiene `position: sticky`. Para que funcione, el contenedor padre debe ser lo suficientemente largo para permitir el scroll. Por ahora, asegúrate de que el texto del footer esté centrado con `text-align: center;`.
+
+
+
+### Introducción a Flexbox
+- **Flexbox** es un sistema de layout bidimensional que permite distribuir y alinear elementos en un contenedor.
+- **Propiedades del contenedor**:
+  - `display: flex;`: Activa el modo flexbox.
+  - `flex-direction: row;` | `row-reverse;` | `column;` | `column-reverse;`: Define la dirección de los elementos.
+  - `justify-content: flex-start;` | `flex-end;` | `center;` | `space-between;` | `space-around;` | `space-evenly;`: Define la alineación en el eje principal.
+  - `align-items: flex-start;` | `flex-end;` | `center;` | `stretch;` | `baseline;`: Define la alineación en el eje transversal.
+  - `flex-wrap: nowrap;` | `wrap;` | `wrap-reverse;`: Define si los elementos se envuelven en varias líneas.
+  - `gap: 10px;`: Define el espacio entre los elementos.
+
+Conceptos Clave:
+- **Flex Container**: El padre (donde pones display: flex).
+
+- **Flex Items**: Los hijos directos que se alinearán.
+
+- **Eje Principal (Main Axis)**: Por defecto es horizontal (filas).
+
+- **Eje Cruzado (Cross Axis)**: Por defecto es vertical.
+
+### Alineación en los Ejes
+Aquí es donde ocurre la magia:
+
+- **justify-content**: Alinea los hijos en el eje principal (horizontal por defecto).
+  - **center**, **space-between** (espacio en medio), **space-around**.
+- **align-items**: Alinea los hijos en el eje cruzado (vertical por defecto).
+  - **center**, **flex-start**, **flex-end**.
+
+
+### ⚡ Reto #10: "El Header Profesional"
+
+Vamos a transformar tu encabezado. Actualmente, tu nombre y tu imagen están uno debajo del otro. Vamos a usar Flexbox para que se vean como una barra de navegación real, con el nombre a un lado y la foto al otro.
+
+Tu misión en el CSS:
+
+Convierte el Header en Flex:
+
+```css
+header {
+  display: flex;
+  justify-content: space-between; /* Empuja los elementos a los extremos */
+  align-items: center;           /* Los centra verticalmente */
+  background-color: navy;
+  padding: 10px 40px;
+  color: white;
+  border-radius: 0 0 15px 15px;  /* Redondea solo las esquinas de abajo */
+}
+```
+
+- Ajusta la imagen: Dale un tamaño pequeño para que quepa bien en la barra.
+
+```css
+header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* La hace circular */
+  border: 2px solid white;
+}
+```
+Color del H1: Como el fondo del header ahora es azul (navy), asegúrate de que el h1 dentro del header sea blanco.
