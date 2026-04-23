@@ -7,34 +7,58 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Arturo Knezevich</h1>
-    <img src="https://cdn-icons-png.flaticon.com/512/606/606200.png" alt="">
-    <h2>Sobre mí</h2>
-    <p>Hola soy estudiante de Ingeniera Electrónica y Automatización Industrial me apasiona la tecnlogía el uso de herramientas IA que permitan mejorar los sistemas productivos y la calidad de servicios de una empresa</p>
-    <a href="https://ec.linkedin.com/" target="_blank">Visita mi perfil profesional</a>
-    <h2>Mis herramientas favoritas</h2>
-    <ul>
-        <li>Raspberry PI</li>
-        <li>Antigravity</li>
-        <li>Python</li>
-        <li>Node-Red</li>
-    </ul>
-    <ol>
-        <li>Aprender a programar un SCADA COMPLETO</li>
-        <li>Aprender HTML & CSS</li>
-        <li>Aprender <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank">JavaScript</a></li>
-        <li>Aprender VUE.JS</li>
-    </ol>
+    <header>
+        <h1>Arturo Knezevich</h1>
+        <img src="https://cdn-icons-png.flaticon.com/512/606/606200.png" alt="">
+    </header>
+
+    <main>
+        
+        <h2>Sobre mí</h2>
+        <p>Hola soy estudiante de Ingeniera Electrónica y Automatización Industrial me apasiona la tecnlogía el uso de herramientas IA que permitan mejorar los sistemas productivos y la calidad de servicios de una empresa</p>
+        <a href="https://ec.linkedin.com/" target="_blank">Visita mi perfil profesional</a>
+        <h2>Mis herramientas favoritas</h2>
+        <ul>
+            <li>Raspberry PI</li>
+            <li>Antigravity</li>
+            <li>Python</li>
+            <li>Node-Red</li>
+        </ul>
+        <ol>
+            <li>Aprender a programar un SCADA COMPLETO</li>
+            <li>Aprender HTML & CSS</li>
+            <li>Aprender <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank">JavaScript</a></li>
+            <li>Aprender VUE.JS</li>
+        </ol>
 
 
-    <form action="">
-        <label for="nombre">Nombre de la máquina:</label>
-        <input id="nombre" type="text" placeholder="Ej: Bomba 1">
-        <label for="direccion">Dirección IP:</label>
-        <input id="direccion" type="number" placeholder="Ej: 192.168.1.1">
-        <button type="submit">Registrar Equipo</button>
-    </form>
+        <form action="">
+            <label for="nombre">Nombre de la máquina:</label>
+            <input id="nombre" type="text" placeholder="Ej: Bomba 1">
+            <label for="direccion">Dirección IP:</label>
+            <input id="direccion" type="number" placeholder="Ej: 192.168.1.1">
 
+            <label for="protocolo">Protocolo de Comunicación:</label>
+            <input id="protocolo" list="opciones" placeholder="Selecciona uno...">
+            <datalist id="opciones">
+                <option value="MQTT"></option>
+                <option value="Modbus"></option>
+                <option value="OPC UA"></option>
+                <option value="HTTP"></option>
+            </datalist>
+
+            <button type="submit">Registrar Equipo</button>
+        </form>
+        <details>
+            <summary>Manual de Usuario</summary>
+            <p>IP: 192.168.0.10 | Puerto: 502 (Modbus)</p>
+        </details>
+        <img src="https://cdn-icons-png.flaticon.com/512/606/606200.png" alt="" loading="lazy" />
+    </main>
+
+    <footer>
+        <p>© 2026 - Arturo Knezevich | Ingeniería en Electrónica</p>
+    </footer>
 
 </body>
 </html>

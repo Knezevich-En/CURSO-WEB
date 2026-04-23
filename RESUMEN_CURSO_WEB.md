@@ -405,9 +405,6 @@ button:hover {
 ```
 
 
-
-
-
 ### 2.3 Selectores Compuestos y BEM
 
 - **Selectores:**
@@ -459,6 +456,93 @@ button:hover {
   object-fit: cover; /* Recorta preservando proporción */
   object-position: center; /* Enfoca el centro */
   ```
+
+
+### Organización de Formularios: fieldset, legend y datalist
+Cuando tienes muchos parámetros (por ejemplo, configuración de red, límites de alarma y datos del motor), no puedes poner todos los inputs sueltos. Necesitas agruparlos.
+
+- **fieldset**: Crea un recuadro que agrupa elementos relacionados.
+- **legend**: Es el título de ese recuadro.
+- **datalist**: Es como un "autocompletado". El usuario puede escribir o elegir de una lista predefinida.
+
+### Multimedia y Carga Eficiente (Lazy Loading)
+Para tus proyectos de monitoreo:
+
+- `<video>` y `<audio>`: Ya no necesitas plugins externos. Puedes embeber un stream de una cámara o una alerta sonora directamente.
+
+- **Lazy Loading** (`loading="lazy"`): Es un atributo para imágenes y iframes. Le dice al navegador: "no cargues esta imagen hasta que el usuario haga scroll cerca de ella". Esto ahorra ancho de banda y hace tu web más rápida.
+
+### Detalles y Resúmenes: <details> y <summary>
+
+Esto es oro puro para interfaces de ingeniería. Te permite crear secciones que se despliegan y se contraen sin usar una sola línea de JavaScript.
+
+**<details>**: Envuelve todo el contenido. Por defecto está cerrado.
+
+**<summary>**: Debe ser la primera línea dentro del details. Es el título que se ve siempre.
+
+```html
+<details>
+    <summary>Ver configuración avanzada del PLC</summary>
+    <p>IP: 192.168.0.10 | Puerto: 502 (Modbus)</p>
+</details>
+```
+
+### ⚡ Reto #6: "Formulario de Configuración Técnica"
+Vamos a actualizar tu archivo index.html. Vamos a simular que este es el panel para configurar un nodo de Node-RED o un equipo en la planta.
+
+**Tu misión es crear un nuevo formulario (o modificar el anterior) que incluya:**
+
+- Un <fieldset> con un <legend> que diga "Parámetros del Sistema".
+
+- Dentro, un <label> y un <input> con un <datalist> para que el usuario elija el "Protocolo de Comunicación" (opciones: MQTT, Modbus, OPC UA, HTTP).
+
+- Usa la etiqueta <details> debajo del formulario para ocultar información técnica como "Manual de Usuario" o "Notas de mantenimiento".
+
+- Añade una imagen de un componente electrónico (puedes usar la de ayer) pero esta vez agrégale el atributo loading="lazy".
+
+
+
+**<details>** : Envuelve todo el contenido. Por defecto está cerrado.
+
+**<summary>** : Debe ser la primera línea dentro del details. Es el título que se ve siempre.
+
+```html
+<details>
+    <summary>Ver configuración avanzada del PLC</summary>
+    <p>IP: 192.168.0.10 | Puerto: 502 (Modbus)</p>
+</details>
+```
+
+### 🏁 Cierre de HTML Avanzado: Semántica y Accesibilidad
+
+Como mencionaste al inicio que aún no dominabas la semántica, vamos a darle el toque final a tu código para que sea 100% profesional.
+
+Actualmente, tu código tiene todos los elementos sueltos en el body. Un experto organiza su código usando contenedores que describen el contenido.
+
+**Etiquetas de Estructura (Semántica):**
+
+- `<header>`: Para tu nombre y foto (el encabezado de tu perfil).
+- `<main>`: Para el contenido principal (Sobre mí, herramientas, objetivos y el formulario).
+- `<section>`: Para agrupar cada bloque lógico (ej. una sección para el formulario de registro).
+- `<footer>`: Para datos de contacto o derechos de autor al final.
+
+Accesibilidad (A11y):
+Añadir alt="Descripción" a las imágenes no es solo por si no cargan, es para que los lectores de pantalla le digan a una persona con discapacidad visual qué hay en la imagen.
+
+### ⚡ Reto #7: "Refactorización Semántica"
+
+Este es el último paso para graduarte de HTML. Vamos a envolver tu código actual en estas etiquetas.
+
+Tu misión es reordenar tu código así:
+
+- Envuelve tu nombre (h1) y tu imagen de perfil en un <header>.
+- Envuelve todo lo demás (desde "Sobre mí" hasta el formulario) en un <main>.
+- Dentro del <main>, coloca el formulario dentro de una <section>.
+- Añade un <footer> al final de todo que diga: © 2026 - Arturo Knezevich | Ingeniería en Electrónica.
+- Bonus: Asegúrate de que todas tus imágenes tengan un alt descriptivo (ej: alt="Icono de engranaje y tecnología").
+
+
+
 
 ### 2.5 Magias Vivas: Pseudoclases y Transiciones
 
